@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatRightBlueBubbleCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatRightBlueBubbleCell" rowHeight="88" id="mT2-A5-Ekn" customClass="ChatBubbleCell" customModule="ChatDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="760" height="88"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mT2-A5-Ekn" id="nvC-QZ-cMZ">
+                <rect key="frame" x="0.0" y="0.0" width="760" height="88"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7aS-wX-bCY" userLabel="Chat Bubble">
+                        <rect key="frame" x="364" y="8" width="310" height="72"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chat-Right-Blue-Bubble" translatesAutoresizingMaskIntoConstraints="NO" id="Wmd-xN-b9s">
+                                <rect key="frame" x="0.0" y="0.0" width="310" height="72"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Smi-Ew-tvf" customClass="PaddingLabel" customModule="ChatDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="310" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="SWA-White"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yi-qt-hNZ" customClass="PaddingLabel" customModule="ChatDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="40" width="310" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="yL4-KX-FQb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <color key="textColor" name="PAX-LightBlueText"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3yi-qt-hNZ" firstAttribute="leading" secondItem="7aS-wX-bCY" secondAttribute="leading" id="1Mq-mg-R81"/>
+                            <constraint firstItem="Wmd-xN-b9s" firstAttribute="top" secondItem="7aS-wX-bCY" secondAttribute="top" id="7lr-Cg-Kne"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="72" id="Dgf-C6-vnj"/>
+                            <constraint firstItem="Smi-Ew-tvf" firstAttribute="top" secondItem="7aS-wX-bCY" secondAttribute="top" id="TI1-gO-Rcx"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="310" placeholder="YES" id="Wco-vl-v5z"/>
+                            <constraint firstAttribute="bottom" secondItem="Wmd-xN-b9s" secondAttribute="bottom" id="a07-DN-brU"/>
+                            <constraint firstAttribute="trailing" secondItem="Smi-Ew-tvf" secondAttribute="trailing" id="aGH-B2-x0y"/>
+                            <constraint firstAttribute="trailing" secondItem="3yi-qt-hNZ" secondAttribute="trailing" id="fT0-G6-wkB"/>
+                            <constraint firstItem="Smi-Ew-tvf" firstAttribute="leading" secondItem="7aS-wX-bCY" secondAttribute="leading" id="naE-il-Xy3"/>
+                            <constraint firstItem="3yi-qt-hNZ" firstAttribute="top" secondItem="Smi-Ew-tvf" secondAttribute="bottom" id="qU0-Au-ba6"/>
+                            <constraint firstItem="Wmd-xN-b9s" firstAttribute="leading" secondItem="7aS-wX-bCY" secondAttribute="leading" id="qha-cZ-VcF"/>
+                            <constraint firstAttribute="trailing" secondItem="Wmd-xN-b9s" secondAttribute="trailing" id="r2c-22-rdA"/>
+                            <constraint firstAttribute="bottom" secondItem="3yi-qt-hNZ" secondAttribute="bottom" constant="16" id="xmc-7w-6ao"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="839-qW-4Xb">
+                        <rect key="frame" x="682" y="30" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="E1H-MU-W8V"/>
+                            <constraint firstAttribute="width" constant="50" id="dY8-f5-XBd"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="839-qW-4Xb" secondAttribute="bottom" constant="8" id="A4A-qu-sPy"/>
+                    <constraint firstItem="839-qW-4Xb" firstAttribute="leading" secondItem="7aS-wX-bCY" secondAttribute="trailing" constant="8" id="AhJ-su-7RU"/>
+                    <constraint firstItem="7aS-wX-bCY" firstAttribute="top" secondItem="nvC-QZ-cMZ" secondAttribute="top" constant="8" id="Rz6-2q-O6F"/>
+                    <constraint firstItem="7aS-wX-bCY" firstAttribute="width" relation="lessThanOrEqual" secondItem="nvC-QZ-cMZ" secondAttribute="width" multiplier="0.7" id="aoc-lC-ECv"/>
+                    <constraint firstAttribute="trailing" secondItem="839-qW-4Xb" secondAttribute="trailing" constant="28" id="jnk-df-MIj"/>
+                    <constraint firstAttribute="bottom" secondItem="7aS-wX-bCY" secondAttribute="bottom" constant="8" id="lg6-U6-nzk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="avatarImage" destination="839-qW-4Xb" id="x5t-3X-1h7"/>
+                <outlet property="messageLabel" destination="Smi-Ew-tvf" id="pk1-vB-fi5"/>
+                <outlet property="timeLabel" destination="3yi-qt-hNZ" id="9wa-GA-WjY"/>
+            </connections>
+            <point key="canvasLocation" x="43" y="29"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="3yi-qt-hNZ">
+            <size key="intrinsicContentSize" width="66.5" height="33.5"/>
+        </designable>
+        <designable name="Smi-Ew-tvf">
+            <size key="intrinsicContentSize" width="77.5" height="40.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="Chat-Right-Blue-Bubble" width="34.5" height="43.5"/>
+        <namedColor name="PAX-LightBlueText">
+            <color red="0.52941176470588236" green="0.60784313725490191" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SWA-White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: SWA Chat
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - name: Technology Innovation
+    affiliation: Southwest Airlines
+identifiers:
+  - type: url
+    value: 'https://southwest.com'
+    description: Southwest Airlines
+repository-code: 'https://github.com/SouthwestAir/SWAChat/'
+url: 'https://southwest.com'
+abstract: >-
+  Real-time chat message feature that can be added to any
+  iOS project.
+keywords:
+  - iOS
+  - Swift
+  - Chat
+  - Firebase
+license: BSD-3-Clause
+version: '1.0'
+date-released: '2023-04-12'
