@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F76952D29FFE7560094DBAB /* ChatDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F76952C29FFE7560094DBAB /* ChatDemoTests.swift */; };
 		590866FF296F5E3B004EEE3B /* SWAMessagingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590866F5296F5E3B004EEE3B /* SWAMessagingMessage.swift */; };
 		59086700296F5E3B004EEE3B /* SWAMessagingChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590866F6296F5E3B004EEE3B /* SWAMessagingChannel.swift */; };
 		59086701296F5E3B004EEE3B /* SWAMessagingSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590866F7296F5E3B004EEE3B /* SWAMessagingSender.swift */; };
@@ -68,7 +69,19 @@
 		74CE21F629A8F9C8005A1738 /* PaddingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CE21F529A8F9C8005A1738 /* PaddingButton.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4F76952E29FFE7560094DBAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74953364296DDA860048D123 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7495336B296DDA860048D123;
+			remoteInfo = ChatDemo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		4F76952A29FFE7560094DBAB /* ChatDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F76952C29FFE7560094DBAB /* ChatDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDemoTests.swift; sourceTree = "<group>"; };
 		590866F5296F5E3B004EEE3B /* SWAMessagingMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWAMessagingMessage.swift; sourceTree = "<group>"; };
 		590866F6296F5E3B004EEE3B /* SWAMessagingChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWAMessagingChannel.swift; sourceTree = "<group>"; };
 		590866F7296F5E3B004EEE3B /* SWAMessagingSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWAMessagingSender.swift; sourceTree = "<group>"; };
@@ -106,6 +119,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4F76952729FFE7560094DBAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74953369296DDA860048D123 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -143,6 +163,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F76952B29FFE7560094DBAB /* ChatDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F76952C29FFE7560094DBAB /* ChatDemoTests.swift */,
+			);
+			path = ChatDemoTests;
+			sourceTree = "<group>";
+		};
 		590866F4296F5E3B004EEE3B /* Messaging */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				7495336E296DDA860048D123 /* ChatDemo */,
+				4F76952B29FFE7560094DBAB /* ChatDemoTests */,
 				7495336D296DDA860048D123 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -225,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				7495336C296DDA860048D123 /* ChatDemo.app */,
+				4F76952A29FFE7560094DBAB /* ChatDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -250,6 +280,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4F76952929FFE7560094DBAB /* ChatDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F76953229FFE7560094DBAB /* Build configuration list for PBXNativeTarget "ChatDemoTests" */;
+			buildPhases = (
+				4F76952629FFE7560094DBAB /* Sources */,
+				4F76952729FFE7560094DBAB /* Frameworks */,
+				4F76952829FFE7560094DBAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F76952F29FFE7560094DBAB /* PBXTargetDependency */,
+			);
+			name = ChatDemoTests;
+			productName = ChatDemoTests;
+			productReference = 4F76952A29FFE7560094DBAB /* ChatDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7495336B296DDA860048D123 /* ChatDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 74953380296DDA860048D123 /* Build configuration list for PBXNativeTarget "ChatDemo" */;
@@ -303,9 +351,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					4F76952929FFE7560094DBAB = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 7495336B296DDA860048D123;
+					};
 					7495336B296DDA860048D123 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
@@ -328,11 +380,19 @@
 			projectRoot = "";
 			targets = (
 				7495336B296DDA860048D123 /* ChatDemo */,
+				4F76952929FFE7560094DBAB /* ChatDemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4F76952829FFE7560094DBAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7495336A296DDA860048D123 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -350,6 +410,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4F76952629FFE7560094DBAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F76952D29FFE7560094DBAB /* ChatDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74953368296DDA860048D123 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -384,6 +452,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4F76952F29FFE7560094DBAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7495336B296DDA860048D123 /* ChatDemo */;
+			targetProxy = 4F76952E29FFE7560094DBAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		74953375296DDA860048D123 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -404,6 +480,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4F76953029FFE7560094DBAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swa.innovationlabs.ChatDemo.ChatDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChatDemo";
+			};
+			name = Debug;
+		};
+		4F76953129FFE7560094DBAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swa.innovationlabs.ChatDemo.ChatDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatDemo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChatDemo";
+			};
+			name = Release;
+		};
 		7495337E296DDA860048D123 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -579,6 +691,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4F76953229FFE7560094DBAB /* Build configuration list for PBXNativeTarget "ChatDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F76953029FFE7560094DBAB /* Debug */,
+				4F76953129FFE7560094DBAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		74953367296DDA860048D123 /* Build configuration list for PBXProject "ChatDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -10,7 +10,10 @@ platform :ios do
 ##########
   desc "Runs tests"
   lane :test do
-    scan(scheme: ENV["SCHEME_CI"])
+    scan(
+      scheme: ENV["SCHEME_CI"],
+      project: "ChatDemo/ChatDemo.xcodeproj"
+    )
   end
 
 
