@@ -1,0 +1,66 @@
+#!ruby
+
+default_platform :ios
+
+platform :ios do
+
+
+##########
+## TEST ##
+##########
+  desc "Runs tests"
+  lane :test do
+    scan(scheme: ENV["SCHEME_CI"])
+  end
+
+
+######################################
+## Xcode Project Version Management ##
+######################################
+  desc "Bump version [bump_type:  major|minor|patch|build]"
+  private_lane :bump_version do |options|
+    UI.error("bump_type must be set") unless options.has_key?(:bump_type)
+
+    if options[:bump_type] == "build"
+      if ENV.has_key?('CIRCLE_BUILD_NUM')
+        increment_build_number(build_number: ENV['CIRCLE_BUILD_NUM'])
+      else
+        increment_build_number
+      end
+
+    else  # bump_type = major|minor|patch
+      increment_version_number(bump_type: options[:bump_type])
+    end
+  end
+
+  desc "Show current project version"
+  lane :current_version do
+    version_number = get_version_number 
+    build_number = get_build_number
+    current_version_string = "#{version_number}-#{build_number}"
+    UI.message("Current version: #{current_version_string}")
+    current_version_string
+  end
+
+  desc "Shortcut to bump major version number"
+  lane :bump_major do
+    bump_version(bump_type: "major")
+  end
+
+  desc "Shortcut to bump minor version number"
+  lane :bump_minor do
+    bump_version(bump_type: "minor")
+  end
+
+  desc "Shortcut to bump patch version number"
+  lane :bump_patch  do
+    bump_version(bump_type: "patch")
+  end
+
+  desc "Shortcut to bump build number"
+  lane :bump_build  do
+    bump_version(bump_type: "build")
+  end
+
+end  # platform :ios
+
