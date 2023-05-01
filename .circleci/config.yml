@@ -22,7 +22,7 @@ commands:
           name: Fastlane Plugins
           command: bundle exec fastlane install_plugins
       - save_cache:
-          key: v3-gems-{{ checksum "Gemfile.lock" }}
+          key: v1-gems-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
 
