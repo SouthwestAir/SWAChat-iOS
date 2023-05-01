@@ -1,0 +1,70 @@
+version: 2.1
+
+executors:
+  macos-build:
+    macos:
+      xcode: 14.3
+
+commands:
+  prepare-fastlane:
+    description: Prepare Fastlane Build
+    parameters:
+      lane:
+        type: string
+        default: "test"
+    steps:
+      - restore_cache:
+          key: v1-gems-{{ checksum "Gemfile.lock" }}
+      - run:
+          name: Install RubyGems
+          command: bundle check || bundle install
+      - run:
+          name: Fastlane Plugins
+          command: bundle exec fastlane install_plugins
+      - save_cache:
+          key: v1-gems-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+
+  post-build:
+    description: Common post-build steps
+    steps:
+      - store_artifacts:
+          path: output
+      - store_test_results:
+          path: output/scan
+
+  run-fastlane:
+    description: Run Fastlane Lane
+    parameters:
+      lane:
+        type: string
+        default: "test"
+    steps:
+      - run:
+          name: Fastlane
+          no_output_timeout: 30m
+          command: bundle exec fastlane ios << parameters.lane >>
+
+jobs:
+  test:
+    executor: macos-build
+    steps:
+      - checkout
+
+      - prepare-fastlane
+      - run-fastlane:
+          lane: test
+      - post-build
+
+workflows:
+  version: 2
+
+  run-tests:
+    jobs:
+      - test:
+          context: XcodeBuild
+          filters:
+            branches:
+              ignore: /main/
+
