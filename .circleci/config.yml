@@ -64,7 +64,3 @@ workflows:
     jobs:
       - test:
           context: XcodeBuild
-          filters:
-            branches:
-              ignore: /main/
-
