@@ -3,7 +3,7 @@ version: 2.1
 executors:
   macos-build:
     macos:
-      xcode: 14.3
+      xcode: 14.3.0
 
 commands:
   prepare-fastlane:
