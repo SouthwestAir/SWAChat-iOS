@@ -7,6 +7,8 @@
 [![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white)](https://developer.apple.com)
 [![Firebase](https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black)](https://console.firebase.google.com/)
 
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/SouthwestAir/SWAChat/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/SouthwestAir/SWAChat/tree/main)
+
 #### Swift, UIKit chat feature for iOS
 
 ## 💡 Concept
