@@ -18,7 +18,7 @@ final class ChatDemoTests: XCTestCase {
     }
 
     func testExample() throws {
-        XCTAssert(true)
+        XCTAssert(true, "True is not true. Time has no meaning. We are the void.")
    }
 
     func testPerformanceExample() throws {
